@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Garage — Seu veículo sempre em boas mãos</title>
+  <meta name="description" content="Cuide do seu veículo e tenha manutenções, abastecimentos e lembretes organizados em um só lugar com o Auto Garage.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Auto Garage — Seu veículo sempre em boas mãos">
+  <meta property="og:description" content="Cuide do seu veículo. Tenha tudo sob controle com o Auto Garage.">
+  <meta property="og:image" content="__ZAPIA_SITE_ORIGIN__/_z/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="__ZAPIA_SITE_ORIGIN__/_z/og.png">
+  <link rel="manifest" href="__ZAPIA_SITE_URL__/manifest.webmanifest">
+  <meta name="theme-color" content="#090d16">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Auto Garage">
+  <link rel="apple-touch-icon" href="__ZAPIA_SITE_URL__/apple-touch-icon.png">
+  <style>
+    :root{color-scheme:dark;--bg:#080c14;--surface:#101a29;--surface2:#14243a;--line:#24384f;--text:#f4f7fb;--muted:#aab8c9;--red:#f52d42;--blue:#1685ff;--green:#47d7a0}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 78% 6%,#152640 0,transparent 34%),var(--bg);color:var(--text);font-family:Roboto,"Arial",sans-serif;line-height:1.55}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{padding:24px 0;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--text);font-size:1.15rem;font-weight:800;letter-spacing:-.4px;text-decoration:none}
+    .brand b{color:var(--red)}
+    .brand-icon{width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#fa354a,#bc1028);display:grid;place-items:center;box-shadow:0 6px 22px #e61e3b44}
+    .brand-icon svg{width:23px;height:23px}
+    .top-link{font-size:.92rem;color:#d4e2f3;text-decoration:none}
+    .hero{min-height:570px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:42px;padding:54px 0 82px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#ff7988;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:1.4px}
+    .eyebrow:before{content:"";width:22px;height:3px;background:var(--red);border-radius:2px}
+    h1{font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.04;letter-spacing:-2.8px;margin:19px 0 20px;max-width:660px}
+    h1 span{color:var(--red)}
+    .intro{font-size:1.13rem;color:#bdc9d8;max-width:540px;margin:0 0 28px}
+    .cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--blue);color:white;text-decoration:none;font-weight:700;padding:14px 21px;border-radius:14px;box-shadow:0 8px 24px #0879ed44}
+    .cta .arrow{font-size:1.25rem;line-height:1}
+    .small-note{font-size:.83rem;color:#8999ac;margin:12px 0 0 2px}
+    .visual{position:relative;max-width:450px;margin:0 auto;width:100%;padding:26px 18px;border:1px solid #32445a;border-radius:34px;background:linear-gradient(160deg,#172638,#0b111c 70%);box-shadow:0 30px 90px #0009,0 0 60px #1685ff17;transform:rotate(1.2deg)}
+    .visual:before{content:"";position:absolute;inset:-1px;border-radius:35px;border-top:2px solid #ed334e;pointer-events:none;opacity:.7}
+    .app-head{display:flex;justify-content:space-between;align-items:center;padding:4px 7px 19px;border-bottom:1px solid #26384a}
+    .app-head strong{font-size:1.15rem}.app-head strong span{color:var(--red)}
+    .app-sub{font-size:.72rem;color:#93a5bb}
+    .menu{font-size:1.3rem;color:#bed0e2}
+    .app-section{padding:18px 5px 10px}
+    .app-title{font-size:.91rem;font-weight:700;display:flex;align-items:center;gap:9px;margin-bottom:12px}
+    .app-title i{font-style:normal;color:#4daaff}
+    .mini-card{background:#102238;border:1px solid #2c4a68;border-radius:14px;padding:12px 13px;margin:9px 0;display:flex;align-items:center;gap:11px}
+    .vehicle-icon{width:42px;height:42px;border-radius:11px;background:#193653;display:grid;place-items:center;font-size:1.35rem}
+    .mini-card b{display:block;font-size:.85rem}.mini-card small{display:block;color:#a5b7ca;font-size:.7rem;margin-top:3px}
+    .badge{margin-left:auto;background:#0d467b;color:#a8d5ff;border-radius:20px;padding:5px 8px;font-size:.61rem;white-space:nowrap}
+    .reminder{margin:10px 5px 3px;background:#172031;padding:11px;border-left:3px solid var(--red);border-radius:4px 11px 11px 4px;font-size:.74rem}
+    .reminder small{color:#99aabe;display:block;margin-top:3px}
+    .fuel{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:7px 0}
+    .stat{background:#0c1725;border:1px solid #263a4f;border-radius:11px;padding:10px 8px;font-size:.65rem;color:#9eb0c4}
+    .stat b{display:block;color:white;font-size:.82rem;margin-top:4px}
+    .features{padding:65px 0 78px;border-top:1px solid #1d2a3b;background:linear-gradient(180deg,#0b111b,#0a0e16)}
+    .section-kicker{color:#ff7180;text-transform:uppercase;font-size:.78rem;letter-spacing:1.5px;font-weight:700;text-align:center}
+    h2{text-align:center;font-size:clamp(1.8rem,3vw,2.65rem);line-height:1.15;margin:10px 0 12px;letter-spacing:-1px}
+    .section-text{text-align:center;color:var(--muted);max-width:590px;margin:0 auto 34px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .feature{padding:22px 18px;border:1px solid #22344a;background:#101a29;border-radius:18px;min-height:175px}
+    .feature-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#12345a;color:#5db0ff;font-size:1.25rem;margin-bottom:17px}
+    .feature:nth-child(2) .feature-icon{background:#351923;color:#ff7180}.feature:nth-child(3) .feature-icon{background:#17342e;color:#5de0b0}.feature:nth-child(4) .feature-icon{background:#332819;color:#ffc768}
+    .feature h3{font-size:1rem;margin:0 0 6px}.feature p{font-size:.85rem;color:#aab8c8;margin:0}
+    .bottom{padding:48px 0 76px;text-align:center}
+    .bottom-box{border:1px solid #30445d;border-radius:22px;background:linear-gradient(120deg,#101d2d,#111321);padding:34px 20px}
+    .bottom-box p{color:#b7c4d2;margin:0 auto 20px;max-width:540px}
+    footer{border-top:1px solid #1c2838;padding:23px 0;color:#8493a6;font-size:.8rem;text-align:center}
+    @media(max-width:820px){.hero{grid-template-columns:1fr;gap:42px;padding:48px 0 65px}.hero-copy{text-align:center}.intro{margin-left:auto;margin-right:auto}.eyebrow{justify-content:center}.visual{max-width:420px}.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.wrap{width:min(100% - 30px,1120px)}header{padding:18px 0}.top-link{font-size:.78rem}.hero{padding-top:38px}h1{font-size:2.65rem;letter-spacing:-1.8px}.intro{font-size:1rem}.visual{padding:19px 12px;border-radius:26px}.grid{grid-template-columns:1fr 1fr;gap:10px}.feature{padding:17px 14px;min-height:170px}.feature p{font-size:.8rem}.features{padding:50px 0}.bottom{padding:35px 0 55px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="#inicio" aria-label="Auto Garage início"><span class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14l-1.4-6.2a2 2 0 0 0-2-1.6H8.4a2 2 0 0 0-2 1.6L5 17Z"/><path d="M4 17v2m16-2v2M7 17v1m10-1v1M6 13h12M8 9l1-3h6l1 3"/><circle cx="7.5" cy="14.5" r=".7" fill="white"/><circle cx="16.5" cy="14.5" r=".7" fill="white"/></svg></span>Auto <b>Garage</b></a>
+    <a class="top-link" href="#recursos">Conheça o app ↓</a>
+  </header>
+  <main>
+    <section class="hero wrap" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow">Seu veículo sempre em boas mãos</div>
+        <h1>Cuide do seu veículo. <span>Tenha tudo sob controle.</span></h1>
+        <p class="intro">Organize seus veículos, acompanhe manutenções e registre abastecimentos em um só lugar. Mais praticidade para cuidar do que te leva mais longe.</p>
+        <a class="cta" href="https://github.com/Dark-ZL/AutoGarage-/raw/refs/heads/main/AutoGarage_v1.0.2_release.apk" aria-label="Baixar o Auto Garage para Android">Baixar para Android <span class="arrow">↓</span></a>
+        <p class="small-note">Arquivo APK para instalação em dispositivos Android.</p>
+      </div>
+      <div class="visual" role="img" aria-label="Prévia ilustrativa das telas do aplicativo Auto Garage">
+        <div class="app-head"><div><strong>Auto <span>Garage</span></strong><div class="app-sub">Seu veículo sempre em boas mãos</div></div><div class="menu">☰</div></div>
+        <div class="app-section">
+          <div class="app-title"><i>▰</i> Meus veículos <span class="badge">+ Adicionar</span></div>
+          <div class="mini-card"><div class="vehicle-icon">🚘</div><div><b>Volkswagen</b><small>75.384 km · Troca de óleo</small></div><span class="badge">Carro</span></div>
+          <div class="mini-card"><div class="vehicle-icon">🏍️</div><div><b>Honda</b><small>35.974 km · Próxima revisão</small></div><span class="badge">Moto</span></div>
+          <div class="reminder">▦ &nbsp; Próximas manutenções<small>Troca de óleo · Revisão · Pneus</small></div>
+        </div>
+        <div class="app-section">
+          <div class="app-title"><i style="color:#fa4c5d">▣</i> Registro de combustível</div>
+          <div class="fuel"><div class="stat">Registros<b>2</b></div><div class="stat">Total gasto<b>R$ 261,50</b></div><div class="stat">Consumo médio<b>—</b></div></div>
+          <div class="mini-card"><div class="vehicle-icon">⛽</div><div><b>Abastecimento</b><small>Volume, valor e preço por litro</small></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="features" id="recursos">
+      <div class="wrap">
+        <div class="section-kicker">Tudo organizado</div>
+        <h2>Seu cuidado com o veículo, sem complicação</h2>
+        <p class="section-text">Acompanhe as informações importantes e encontre tudo com facilidade em uma interface simples e direta.</p>
+        <div class="grid">
+          <article class="feature"><div class="feature-icon">🚗</div><h3>Seus veículos</h3><p>Organize carros e motos com quilometragem sempre à mão.</p></article>
+          <article class="feature"><div class="feature-icon">🔧</div><h3>Manutenções</h3><p>Tenha o histórico e as próximas manutenções em ordem.</p></article>
+          <article class="feature"><div class="feature-icon">⛽</div><h3>Combustível</h3><p>Registre abastecimentos e acompanhe os gastos.</p></article>
+          <article class="feature"><div class="feature-icon">🔔</div><h3>Lembretes</h3><p>Não deixe passar revisões e cuidados importantes.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="bottom wrap" id="download">
+      <div class="bottom-box">
+        <div class="section-kicker">Auto Garage</div>
+        <h2>Seu veículo sempre em boas mãos.</h2>
+        <p>Baixe o APK do Auto Garage para instalar o aplicativo no seu dispositivo Android.</p>
+        <a class="cta" href="https://github.com/Dark-ZL/AutoGarage-/raw/refs/heads/main/AutoGarage_v1.0.2_release.apk" aria-label="Baixar o Auto Garage para Android">Baixar APK <span class="arrow">↓</span></a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">Auto Garage · Cuide do seu veículo. Tenha tudo sob controle.</div></footer>
+</body>
+</html>
